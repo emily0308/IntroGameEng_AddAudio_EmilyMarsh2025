@@ -14,7 +14,7 @@ public class AsteroidSpawner : MonoBehaviour
 
     public SFXManager sfxManager;
     private AudioSource backgroundMusic;
-    public float tempoIncreaseParent = 0.05f;
+    public float tempoIncreasePercent = 0.05f;
 
     public bool spawn = true;
 
@@ -61,6 +61,8 @@ public class AsteroidSpawner : MonoBehaviour
                     }
                 }
 
+                backgroundMusic.pitch += tempoIncreasePercent;
+
                 for (int i = 0; i < hazardCount; i++)
                 {
                     Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
@@ -75,13 +77,7 @@ public class AsteroidSpawner : MonoBehaviour
                     yield return new WaitForSeconds(spawnWait);
                 }
                 yield return new WaitForSeconds(waveWait);
-
             }
-
-            
-
         }
     }
-
-    
-}
+} 
