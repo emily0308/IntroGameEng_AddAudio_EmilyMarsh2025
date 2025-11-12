@@ -1638,7 +1638,7 @@ GameObject:
   - component: {fileID: 814336772}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3389,7 +3389,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9b18653b22d1214bb02a4f3cd914fa1, type: 2}
+  - {fileID: 2100000, guid: 08100522719d59949aa283b186526bf0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3646,7 +3646,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 474251b83c2b9234097e2d5d9a581b71, type: 3}
+  m_Resource: {fileID: 8300000, guid: 77a8b8aa63fa207469111cd734301e84, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1

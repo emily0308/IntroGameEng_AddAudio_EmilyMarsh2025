@@ -20,17 +20,8 @@ public class SFXManager : MonoBehaviour
     public void Awake()
     {
         SFXaudioSource = GetComponent<AudioSource>();
-        //GameObject child = this.transform.Find("BgMusic").gameObject;
-        BgMusicAudioSource = gameObject.transform.Find("BgMusic").gameObject.GetComponent<AudioSource>();
-
-
-        
-        //BgMusicAudioSource.GetComponent<AudioSource>().Play();       
+        BgMusicAudioSource = gameObject.transform.Find("BgMusic").gameObject.GetComponent<AudioSource>();     
     }
-
-
-
-    //called in the PlayerController Script
     public void PlayerShoot()
     {
         float randomPitch = Random.Range(1f - pitchVariance, 1f + pitchVariance);
@@ -38,8 +29,6 @@ public class SFXManager : MonoBehaviour
         SFXaudioSource.pitch = randomPitch;
         SFXaudioSource.PlayOneShot(playerShoot);
     }
-
-    //called in the PlayerController Script
     public void PlayerDamage()
     {
         float randomPitch = Random.Range(1f - pitchVariance, 1f + pitchVariance);
@@ -47,14 +36,10 @@ public class SFXManager : MonoBehaviour
         SFXaudioSource.pitch = randomPitch;
         SFXaudioSource.PlayOneShot(playerDamage);
     }
-
-    //called in the PlayerController Script
     public void PlayerExplosion()
     {
         SFXaudioSource.PlayOneShot(playerExplosion);
     }
-
-    //called in the AsteroidDestroy script
     public void AsteroidExplosion()
     {
         float randomPitch = Random.Range(1f - pitchVariance, 1f + pitchVariance);
@@ -62,18 +47,20 @@ public class SFXManager : MonoBehaviour
         SFXaudioSource.pitch = randomPitch;
         SFXaudioSource.PlayOneShot(asteroidExplosion);
     }
-
-    
     public void BGMusicMainMenu()
     {
         BgMusicAudioSource.clip = BgMusicTitleScreen;
         BgMusicAudioSource.Play();
     }
-
     public void BGMusicGameplay()
     {
         BgMusicAudioSource.GetComponent<AudioSource>().clip = BgMusicGameplay;
         BgMusicAudioSource.Play();
 
     }
+    public AudioSource GetBgMusicAudioSource()
+    {
+        return BgMusicAudioSource;
+    }
 }
+
